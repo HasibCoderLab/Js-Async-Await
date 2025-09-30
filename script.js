@@ -18,3 +18,34 @@ async function getWeatherData() {
     await Api();  // 2nd call
 
 }
+
+//==============|Example 03|==========
+const getData = (DataID) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Data", DataID);
+            resolve(2025)
+
+        }, 4000);
+    })
+}
+
+//Async-Await
+async function getAllData() {
+    console.log("loding 1st data");
+
+    await getData(1);
+    console.log("loding 2nd data");
+
+    await getData(2);
+    console.log("loding 3rd data");
+
+    await getData(3);
+    console.log("loding 4th data");
+
+    await getData(4);
+
+  
+
+    
+}
